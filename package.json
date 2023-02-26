@@ -1,0 +1,29 @@
+{
+  "name": "less-live",
+  "version": "1.0.0",
+  "description": "\"Compile-on-save\" Less to CSS in real time",
+  "bin": {
+    "less-live": "bin/less-live.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "less": "./less-live.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanevs22/less-live.git"
+  },
+  "keywords": [
+    "less"
+  ],
+  "author": "Alex Evseev <sanevs2@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanevs22/less-live/issues"
+  },
+  "homepage": "https://github.com/Sanevs22/less-live#readme",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "less": "^4.1.3"
+  }
+}
