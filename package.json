@@ -1,6 +1,6 @@
 {
   "name": "less-live",
-  "version": "1.0.0",
+  "version": "2.0.2",
   "description": "\"Compile-on-save\" Less to CSS in real time",
   "bin": {
     "less-live": "bin/less-live.js"
@@ -8,7 +8,7 @@
   "main": "less-live-lib.js",
   "preferGlobal": true,
   "scripts": {
-    "less": "./less-live.js"
+    "less-start": "./less-live.js"
   },
   "repository": {
     "type": "git",
