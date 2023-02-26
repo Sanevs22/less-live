@@ -1,6 +1,6 @@
 {
   "name": "less-live",
-  "version": "2.0.2",
+  "version": "2.1.8",
   "description": "\"Compile-on-save\" Less to CSS in real time",
   "bin": {
     "less-live": "bin/less-live.js"
