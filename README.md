@@ -1,5 +1,16 @@
-# less-live
+# less-live 
 
+ <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
+         
+<div align="center">
+<h4>command +s<h4>
+<img height="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/less/less-plain-wordmark.svg" />&nbsp; &nbsp;	&nbsp;	&nbsp;	&nbsp;	
+<img height="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />&nbsp;
+<h3>in real time<h3>
+</div>
+<br>
+
+ 
 
 "Compile-on-save"  Less to CSS in real time 
 <br>
@@ -7,34 +18,60 @@
 
 <h2 align="center">Install / Установка</h2>
 
-clone repositorie / Клонируй репозиторий:
 
 ```bash
-git clone https://github.com/Sanevs22/less-live.git
+npm i -g less-live
 ```
 
-Make dependencies/ Восстанови зависимости:
+<h2 align="center">Start / Запуск</h2>
+
 
 ```bash
-npm install 
+ less-live [main-less-file] [final-css-file(default: style.css)]
 ```
+<h3 align="center">Stop / Стоп</h3>
 
-Отредактируй less-live.js
+control + c
 
-```
-const lessStyleDir = './test-styles/'; // директория с less файлами
-const lessStyleFile = './test-styles/style.less'; // главный less файл в который все остальные подключены через @import
-const cssStyleFile = './test-styles/style.css'; // итоговый css файл
-```
-
-Run / запусти:
-
-```bash
-npm run less
-```
 
 <h2 align="center">About / Описание</h2>
 
-В директории test-styles находится тестовый проект для вашего удобства. Выполните запуск с параметрами по умолчанию. 
-<br>
-Все less-файлы подключаются к основному через @import
+Все less-файлы подключаются к основному через @import <br>
+All less files are connected to the main one via @import
+
+<h3 align="center">Source files / Исходные файлы</h3>
+
+
+```bash
+main.less
+
+@import "./second.less";
+@main-colot: tomato;
+
+h1 {
+    color: @main-colot;
+    font-size: 22px;
+}
+```
+
+```bash
+second.less
+
+h3 {
+    color: aqua;
+}
+```
+<h3 align="center">Final build / Финальная сборка</h3>
+
+```bash
+style.css
+
+h3 {
+  color: aqua;
+}
+h1 {
+  color: tomato;
+  font-size: 22px;
+}
+
+```

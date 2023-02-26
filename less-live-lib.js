@@ -4,7 +4,7 @@ const path = require('path');                           // работа с пу�
 
 const args = require('./bin/less-live');                // получаем аргументы при вводе
 const dir = __dirname;                                  // определяем текущую дерикторию
-const lessStyleFile = path.join(dir ,args[1]);          // получаем полный адрес исходного less 
+const lessStyleFile = path.resolve(args[1]);            // получаем полный адрес исходного less 
 const dirLess = path.parse(lessStyleFile).dir;          // получаем директорию в которой находится исходный less
 
 let cssStyleFile = 'style.css';                         // имя выходного файла по дефолту, но если был второй аргумент, то заменяем на него
@@ -13,6 +13,7 @@ if (args[2] !== undefined) {
 }
 
 console.log('less-live is running');
+
 //  функция сборки less => css
 let makeCss = () => {
     const ls = spawn('lessc', [lessStyleFile, cssStyleFile]);
@@ -23,6 +24,7 @@ let makeCss = () => {
         console.error(`stderr: ${data}`);
     });
 }
+
 
 makeCss();
 // цикл отслеживания изменений всех файлов less в рабочей директории
