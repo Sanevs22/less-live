@@ -5,7 +5,8 @@
   "bin": {
     "less-live": "bin/less-live.js"
   },
-  "main": "index.js",
+  "main": "less-live-lib.js",
+  "preferGlobal": true,
   "scripts": {
     "less": "./less-live.js"
   },
@@ -17,7 +18,7 @@
     "less"
   ],
   "author": "Alex Evseev <sanevs2@gmail.com>",
-  "license": "ISC",
+  "license": "MSI",
   "bugs": {
     "url": "https://github.com/Sanevs22/less-live/issues"
   },

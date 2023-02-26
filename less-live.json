@@ -1,0 +1,5 @@
+{
+    "lessStyleDir" : "./test-styles/",                       
+    "lessStyleFile" : "./test-styles/style.less",
+    "cssStyleFile" : "./test-styles/style.css"
+}
